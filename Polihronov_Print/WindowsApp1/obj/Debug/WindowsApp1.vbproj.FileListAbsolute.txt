@@ -1,0 +1,4 @@
+C:\Users\mitko\Desktop\Work\Polihronov_Print\WindowsApp1\obj\Debug\WindowsApp1.vbprojResolveAssemblyReference.cache
+C:\Users\mitko\Desktop\Work\Polihronov_Print\WindowsApp1\obj\Debug\WindowsApp1.Form1.resources
+C:\Users\mitko\Desktop\Work\Polihronov_Print\WindowsApp1\obj\Debug\WindowsApp1.Resources.resources
+C:\Users\mitko\Desktop\Work\Polihronov_Print\WindowsApp1\obj\Debug\WindowsApp1.vbproj.GenerateResource.Cache

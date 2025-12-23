@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MonzaPrint", "MonzaPrint\MonzaPrint.vbproj", "{E844363A-FEDF-44AA-A7AA-39E65DAE4135}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "MonzaPrintConsole", "MonzaConsolePrint\MonzaPrintConsole.vbproj", "{7E2D34C2-17B5-490A-A375-E09DC7980B64}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E844363A-FEDF-44AA-A7AA-39E65DAE4135}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E844363A-FEDF-44AA-A7AA-39E65DAE4135}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E844363A-FEDF-44AA-A7AA-39E65DAE4135}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E844363A-FEDF-44AA-A7AA-39E65DAE4135}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E2D34C2-17B5-490A-A375-E09DC7980B64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E2D34C2-17B5-490A-A375-E09DC7980B64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E2D34C2-17B5-490A-A375-E09DC7980B64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E2D34C2-17B5-490A-A375-E09DC7980B64}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0EAC8F02-3D98-402C-879F-2416910EA1ED}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/bdsoftltd
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = MonzaPrint\\MonzaPrint.vbproj
+		SccProjectName1 = MonzaPrint
+		SccLocalPath1 = MonzaPrint
+		SccProjectUniqueName2 = MonzaConsolePrint\\MonzaPrintConsole.vbproj
+		SccProjectName2 = MonzaConsolePrint
+		SccLocalPath2 = MonzaConsolePrint
+	EndGlobalSection
+EndGlobal

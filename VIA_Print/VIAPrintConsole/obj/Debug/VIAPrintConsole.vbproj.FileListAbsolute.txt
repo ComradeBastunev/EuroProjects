@@ -1,0 +1,3 @@
+C:\Users\mitko\Desktop\Work\VIA_Print\VIAPrintConsole\obj\Debug\VIAPrintConsole.vbprojResolveAssemblyReference.cache
+C:\Users\mitko\Desktop\Work\VIA_Print\VIAPrintConsole\obj\Debug\VIAPrintConsole.Resources.resources
+C:\Users\mitko\Desktop\Work\VIA_Print\VIAPrintConsole\obj\Debug\VIAPrintConsole.vbproj.GenerateResource.Cache

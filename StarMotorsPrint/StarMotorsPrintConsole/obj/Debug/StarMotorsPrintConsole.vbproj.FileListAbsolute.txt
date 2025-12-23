@@ -1,0 +1,3 @@
+C:\Users\mitko\Desktop\Work\StarMotorsPrint\StarMotorsPrintConsole\obj\Debug\StarMotorsPrintConsole.vbprojResolveAssemblyReference.cache
+C:\Users\mitko\Desktop\Work\StarMotorsPrint\StarMotorsPrintConsole\obj\Debug\StarMotorsPrintConsole.Resources.resources
+C:\Users\mitko\Desktop\Work\StarMotorsPrint\StarMotorsPrintConsole\obj\Debug\StarMotorsPrintConsole.vbproj.GenerateResource.Cache

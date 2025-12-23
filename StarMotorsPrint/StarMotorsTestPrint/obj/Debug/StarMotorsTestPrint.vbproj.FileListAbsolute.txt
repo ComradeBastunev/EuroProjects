@@ -1,0 +1,5 @@
+C:\Users\mitko\Desktop\Work\StarMotorsPrint\StarMotorsTestPrint\obj\Debug\StarMotorsTestPrint.vbprojResolveAssemblyReference.cache
+C:\Users\mitko\Desktop\Work\StarMotorsPrint\StarMotorsTestPrint\obj\Debug\StarMotorsTestPrint.Form1.resources
+C:\Users\mitko\Desktop\Work\StarMotorsPrint\StarMotorsTestPrint\obj\Debug\StarMotorsTestPrint.Resources.resources
+C:\Users\mitko\Desktop\Work\StarMotorsPrint\StarMotorsTestPrint\obj\Debug\StarMotorsTestPrint.vbproj.GenerateResource.Cache
+C:\Users\mitko\Desktop\Work\StarMotorsPrint\StarMotorsTestPrint\obj\Debug\StarMotorsTestPrint.exe.licenses

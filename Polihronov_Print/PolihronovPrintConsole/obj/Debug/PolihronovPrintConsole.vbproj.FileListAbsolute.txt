@@ -1,0 +1,2 @@
+C:\Users\mitko\Desktop\Work\Polihronov_Print\PolihronovPrintConsole\obj\Debug\PolihronovPrintConsole.Resources.resources
+C:\Users\mitko\Desktop\Work\Polihronov_Print\PolihronovPrintConsole\obj\Debug\PolihronovPrintConsole.vbproj.GenerateResource.Cache

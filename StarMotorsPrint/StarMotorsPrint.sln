@@ -1,0 +1,59 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1433
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "StarMotorsPrint", "StarMotorsPrint\StarMotorsPrint.vbproj", "{1B5EBCFE-A5B7-415C-9EEA-D25E673CD1D1}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "StarMotorsTestPrint", "StarMotorsTestPrint\StarMotorsTestPrint.vbproj", "{0B6399E1-0372-4072-A74C-B6F11CAB3647}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "StarMotorsInstall", "StarMotorsInstall\StarMotorsInstall.vdproj", "{3D339ED5-CD61-4B16-9042-44E4A6164F6A}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "StarMotorsPrintConsole", "StarMotorsPrintConsole\StarMotorsPrintConsole.vbproj", "{9BB2E39C-4AD3-400C-81B3-96D227E5EE65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B5EBCFE-A5B7-415C-9EEA-D25E673CD1D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B5EBCFE-A5B7-415C-9EEA-D25E673CD1D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B5EBCFE-A5B7-415C-9EEA-D25E673CD1D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B5EBCFE-A5B7-415C-9EEA-D25E673CD1D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B6399E1-0372-4072-A74C-B6F11CAB3647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B6399E1-0372-4072-A74C-B6F11CAB3647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B6399E1-0372-4072-A74C-B6F11CAB3647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B6399E1-0372-4072-A74C-B6F11CAB3647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D339ED5-CD61-4B16-9042-44E4A6164F6A}.Debug|Any CPU.ActiveCfg = Debug
+		{3D339ED5-CD61-4B16-9042-44E4A6164F6A}.Release|Any CPU.ActiveCfg = Release
+		{9BB2E39C-4AD3-400C-81B3-96D227E5EE65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB2E39C-4AD3-400C-81B3-96D227E5EE65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB2E39C-4AD3-400C-81B3-96D227E5EE65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB2E39C-4AD3-400C-81B3-96D227E5EE65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8DA803AA-A80D-425A-B93C-E204308FB7B9}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 5
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/bdsoftltd
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = StarMotorsPrint\\StarMotorsPrint.vbproj
+		SccProjectName1 = StarMotorsPrint
+		SccLocalPath1 = StarMotorsPrint
+		SccProjectUniqueName2 = StarMotorsTestPrint\\StarMotorsTestPrint.vbproj
+		SccProjectName2 = StarMotorsTestPrint
+		SccLocalPath2 = StarMotorsTestPrint
+		SccProjectUniqueName3 = StarMotorsInstall\\StarMotorsInstall.vdproj
+		SccProjectName3 = StarMotorsInstall
+		SccLocalPath3 = StarMotorsInstall
+		SccProjectUniqueName4 = StarMotorsPrintConsole\\StarMotorsPrintConsole.vbproj
+		SccProjectName4 = StarMotorsPrintConsole
+		SccLocalPath4 = StarMotorsPrintConsole
+	EndGlobalSection
+EndGlobal

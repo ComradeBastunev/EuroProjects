@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1B5EBCFE-A5B7-415C-9EEA-D25E673CD1D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>StarMotorsPrint</RootNamespace>
+    <AssemblyName>StarMotorsPrint</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>StarMotorsPrint.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>StarMotorsPrint.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v16.2.Core, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v16.2.Core, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v16.2.Core, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v16.2.Core, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v16.2.Core, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v16.2.Core, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v16.2.Core, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v16.2.Core, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v16.2.Core, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v16.2.Extensions, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v16.2, Version=16.2.13.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet1.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChooseContractType.Designer.vb">
+      <DependentUpon>FormChooseContractType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormChooseContractType.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormContract.Designer.vb">
+      <DependentUpon>FormContract.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormContract.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrintCar.Designer.vb">
+      <DependentUpon>FormPrintCar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrintCar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormPrintOrder.Designer.vb">
+      <DependentUpon>FormPrintOrder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormPrintOrder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Module1.vb" />
+    <Compile Include="Order_Print.Designer.vb">
+      <DependentUpon>Order_Print.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Order_Print.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="ReportInvoice.Designer.vb">
+      <DependentUpon>ReportInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportInvoice.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportInvoicePayments.Designer.vb">
+      <DependentUpon>ReportInvoicePayments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportInvoicePayments.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportOffer.Designer.vb">
+      <DependentUpon>ReportOffer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportOffer.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportOfferAllEquipment.Designer.vb">
+      <DependentUpon>ReportOfferAllEquipment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportOfferAllEquipment.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportOfferBaseEquipment.Designer.vb">
+      <DependentUpon>ReportOfferBaseEquipment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportOfferBaseEquipment.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportOfferOptions.Designer.vb">
+      <DependentUpon>ReportOfferOptions.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportOfferOptions.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportPPPItems.Designer.vb">
+      <DependentUpon>ReportPPPItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportPPPItems.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ReportProforma.Designer.vb">
+      <DependentUpon>ReportProforma.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportProforma.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Order_Parts.Designer.vb">
+      <DependentUpon>Report_Order_Parts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Order_Parts.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Order_Jobs.Designer.vb">
+      <DependentUpon>Report_Order_Jobs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Order_Jobs.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_PPP.Designer.vb">
+      <DependentUpon>Report_PPP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_PPP.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="StarMotorsReports.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChooseContractType.resx">
+      <DependentUpon>FormChooseContractType.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormContract.resx">
+      <DependentUpon>FormContract.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrintCar.resx">
+      <DependentUpon>FormPrintCar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormPrintOrder.resx">
+      <DependentUpon>FormPrintOrder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Order_Print.resx">
+      <DependentUpon>Order_Print.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportInvoice.resx">
+      <DependentUpon>ReportInvoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportInvoicePayments.resx">
+      <DependentUpon>ReportInvoicePayments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportOffer.resx">
+      <DependentUpon>ReportOffer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportOfferAllEquipment.resx">
+      <DependentUpon>ReportOfferAllEquipment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportOfferBaseEquipment.resx">
+      <DependentUpon>ReportOfferBaseEquipment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportOfferOptions.resx">
+      <DependentUpon>ReportOfferOptions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportPPPItems.resx">
+      <DependentUpon>ReportPPPItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportProforma.resx">
+      <DependentUpon>ReportProforma.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Order_Parts.resx">
+      <DependentUpon>Report_Order_Parts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Order_Jobs.resx">
+      <DependentUpon>Report_Order_Jobs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_PPP.resx">
+      <DependentUpon>Report_PPP.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="000_Contract_name.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="000_Order_name.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="000_Contract_Firm.doc">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="app.config" />
+    <None Include="DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <Content Include="Car_IS.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Custom_Print.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </Content>
+    <None Include="DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>

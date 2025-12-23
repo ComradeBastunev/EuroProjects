@@ -1,0 +1,1344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="StoreModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm/ssdl">
+        <EntityType Name="TmpPrintOrder">
+          <Key>
+            <PropertyRef Name="USERN" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="USERN" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="Code" Type="varchar" MaxLength="25" />
+          <Property Name="Description" Type="varchar" MaxLength="150" />
+          <Property Name="Quant" Type="numeric" Precision="14" Scale="4" />
+          <Property Name="Price" Type="numeric" Precision="15" Scale="2" />
+          <Property Name="Type" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="Empl_ID" Type="numeric" Precision="6" Scale="0" />
+          <Property Name="Empl_Name" Type="varchar" MaxLength="100" />
+          <Property Name="start_t" Type="datetime" />
+          <Property Name="Stop_T" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Store.dbo.Cars_List' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Cars_List">
+          <Key>
+            <PropertyRef Name="Plate_Nr" />
+            <PropertyRef Name="Vin_Nr" />
+            <PropertyRef Name="Firm_Code" />
+            <PropertyRef Name="Car_User_Code" />
+            <PropertyRef Name="Date_Created" />
+            <PropertyRef Name="Empl_No_Created" />
+            <PropertyRef Name="Date_Last_Update" />
+            <PropertyRef Name="Empl_No_Updated" />
+            <PropertyRef Name="isResource" />
+            <PropertyRef Name="Client_Group_Owner" />
+            <PropertyRef Name="Client_Group_User" />
+            <PropertyRef Name="Full_Vin" />
+            <PropertyRef Name="Contr_Type" />
+            <PropertyRef Name="Contr_Type_Name" />
+            <PropertyRef Name="User_Contr_Type" />
+            <PropertyRef Name="User_Contr_Type_Name" />
+          </Key>
+          <Property Name="Plate_Nr" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Vin_Typ" Type="varchar" MaxLength="20" />
+          <Property Name="Vin_Nr" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="Engine_Nr" Type="varchar" MaxLength="30" />
+          <Property Name="Firm_Code" Type="decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="Car_User_Code" Type="numeric" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="Firm" Type="varchar" MaxLength="75" />
+          <Property Name="User_Firm" Type="varchar" MaxLength="75" />
+          <Property Name="Old_Client_Nr" Type="numeric" Precision="6" Scale="0" />
+          <Property Name="Resp" Type="varchar" MaxLength="50" />
+          <Property Name="Contract_No" Type="varchar" MaxLength="20" />
+          <Property Name="Discount_Group_Exp_Date" Type="datetime" />
+          <Property Name="Discount_Group" Type="varchar" MaxLength="50" />
+          <Property Name="Body_Color" Type="varchar" MaxLength="10" />
+          <Property Name="Upholst_Color" Type="varchar" MaxLength="10" />
+          <Property Name="Model_Name" Type="varchar" MaxLength="306" />
+          <Property Name="Make" Type="varchar" MaxLength="255" />
+          <Property Name="Model" Type="varchar" MaxLength="50" />
+          <Property Name="Model_No" Type="decimal" Precision="15" Scale="0" />
+          <Property Name="Model_Index" Type="varchar" MaxLength="50" />
+          <Property Name="Reg_Date" Type="datetime" />
+          <Property Name="Notes" Type="varchar" MaxLength="255" />
+          <Property Name="Reminder" Type="varchar" MaxLength="255" />
+          <Property Name="Last_Visit" Type="datetime" />
+          <Property Name="Last_KM" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="Date_Created" Type="datetime" Nullable="false" />
+          <Property Name="Empl_No_Created" Type="numeric" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Empl_Name_Created" Type="varchar" MaxLength="101" />
+          <Property Name="Date_Last_Update" Type="datetime" Nullable="false" />
+          <Property Name="Empl_No_Updated" Type="numeric" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Empl_Name_Updated" Type="varchar" MaxLength="101" />
+          <Property Name="Warranty_Start_Date" Type="datetime" />
+          <Property Name="Warranty_End_Date" Type="datetime" />
+          <Property Name="Serie" Type="varchar" MaxLength="25" />
+          <Property Name="Dev_Serie" Type="varchar" MaxLength="4" />
+          <Property Name="Engine_Typ" Type="varchar" MaxLength="50" />
+          <Property Name="Transmission" Type="varchar" MaxLength="50" />
+          <Property Name="Fuel" Type="varchar" MaxLength="50" />
+          <Property Name="Body_Type" Type="varchar" MaxLength="50" />
+          <Property Name="City" Type="varchar" MaxLength="25" />
+          <Property Name="Postal_Code" Type="varchar" MaxLength="10" />
+          <Property Name="Address1" Type="varchar" MaxLength="50" />
+          <Property Name="Phone" Type="varchar" MaxLength="25" />
+          <Property Name="Phone1" Type="varchar" MaxLength="255" />
+          <Property Name="Fax" Type="varchar" MaxLength="25" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Represent" Type="varchar" MaxLength="50" />
+          <Property Name="Prezident" Type="varchar" MaxLength="50" />
+          <Property Name="Address_Coresp" Type="varchar" MaxLength="150" />
+          <Property Name="User_City" Type="varchar" MaxLength="25" />
+          <Property Name="User_Postal_Code" Type="varchar" MaxLength="10" />
+          <Property Name="User_Address" Type="varchar" MaxLength="50" />
+          <Property Name="User_Phone" Type="varchar" MaxLength="25" />
+          <Property Name="User_Phone1" Type="varchar" MaxLength="255" />
+          <Property Name="User_Fax" Type="varchar" MaxLength="25" />
+          <Property Name="User_Email" Type="varchar" MaxLength="50" />
+          <Property Name="User_Represent" Type="varchar" MaxLength="50" />
+          <Property Name="User_Prezident" Type="varchar" MaxLength="50" />
+          <Property Name="User_Address_Coresp" Type="varchar" MaxLength="150" />
+          <Property Name="Contact_ID" Type="int" />
+          <Property Name="Title" Type="varchar" MaxLength="10" />
+          <Property Name="First_Name" Type="varchar" MaxLength="50" />
+          <Property Name="SurName" Type="varchar" MaxLength="50" />
+          <Property Name="Family" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Names" Type="varchar" MaxLength="112" />
+          <Property Name="Contact_Address" Type="varchar" MaxLength="100" />
+          <Property Name="Contact_City" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Email" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Fax" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Post_Code" Type="varchar" MaxLength="8" />
+          <Property Name="Company" Type="varchar" MaxLength="100" />
+          <Property Name="Buis_Pers" Type="bit" />
+          <Property Name="Preff_Contact" Type="tinyint" />
+          <Property Name="Preff_Contact_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Personal" Type="bit" />
+          <Property Name="Contact_Relation" Type="numeric" Precision="15" Scale="0" />
+          <Property Name="Contact_Relation_Name" Type="varchar" MaxLength="50" />
+          <Property Name="DailyKM" Type="float" />
+          <Property Name="DailyKMCalcDate" Type="datetime" />
+          <Property Name="Expected_KM" Type="float" />
+          <Property Name="isResource" Type="bit" Nullable="false" />
+          <Property Name="CarGUID" Type="uniqueidentifier" />
+          <Property Name="InsBroker" Type="decimal" Precision="15" Scale="0" />
+          <Property Name="InsBrokerOffer" Type="varchar" MaxLength="50" />
+          <Property Name="SalesChannel" Type="varchar" MaxLength="50" />
+          <Property Name="Client_Group_Owner" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Client_Group_User" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Deff_Service" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="Deff_Split" Type="numeric" Precision="6" Scale="0" />
+          <Property Name="Full_Vin" Type="varchar" MaxLength="40" Nullable="false" />
+          <Property Name="OwnerConsent" Type="varchar" MaxLength="4000" />
+          <Property Name="UserConsent" Type="varchar" MaxLength="4000" />
+          <Property Name="Contr_Type" Type="numeric" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="Contr_Type_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="User_Contr_Type" Type="numeric" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="User_Contr_Type_Name" Type="varchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Store.dbo.Empl_Summary' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Empl_Summary">
+          <Key>
+            <PropertyRef Name="Empl_Code" />
+            <PropertyRef Name="Store" />
+            <PropertyRef Name="Service" />
+            <PropertyRef Name="Saler" />
+            <PropertyRef Name="Stock_Op" />
+            <PropertyRef Name="Close_Ord_OnPrn" />
+            <PropertyRef Name="AutoForm_Parts" />
+            <PropertyRef Name="UseCarsColors" />
+            <PropertyRef Name="Client_Cards" />
+            <PropertyRef Name="Stock_Use_Calc_Km" />
+            <PropertyRef Name="Vat_Perc" />
+            <PropertyRef Name="AdvancedWorkPlanning" />
+            <PropertyRef Name="Oper_Typ" />
+            <PropertyRef Name="GMIntegration" />
+            <PropertyRef Name="ContactCheckType" />
+            <PropertyRef Name="Repeated_Visit_Days" />
+            <PropertyRef Name="Fixed_Repeated_Visit_Reason" />
+            <PropertyRef Name="ShowAllStores" />
+            <PropertyRef Name="CheckAllCodes" />
+            <PropertyRef Name="Order_Menu_Permisions" />
+            <PropertyRef Name="Show_All_Reminders_Order" />
+            <PropertyRef Name="No_KM_Orders" />
+            <PropertyRef Name="FIRM" />
+            <PropertyRef Name="LogDAT" />
+            <PropertyRef Name="Warranty_Split" />
+            <PropertyRef Name="Dealer_No" />
+            <PropertyRef Name="ShowAllTasks" />
+            <PropertyRef Name="CarsInsuranceInfo" />
+            <PropertyRef Name="N18Active" />
+            <PropertyRef Name="ColorOrdersOnFlag" />
+            <PropertyRef Name="CheckDuplicateOrders" />
+            <PropertyRef Name="ShowNotesClient" />
+            <PropertyRef Name="ShowItemsSearch" />
+            <PropertyRef Name="CheckGDPROrders" />
+            <PropertyRef Name="ProposeCarModel" />
+          </Key>
+          <Property Name="Empl_Code" Type="decimal" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Store" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Service" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Saler" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Stock_Op" Type="decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="ShowAllSplits" Type="bit" />
+          <Property Name="CloseAllSplits" Type="bit" />
+          <Property Name="Show_All_Parts" Type="bit" />
+          <Property Name="Warr_Stamps" Type="bit" />
+          <Property Name="Deff_Split" Type="decimal" Precision="6" Scale="0" />
+          <Property Name="Log_Cars" Type="bit" />
+          <Property Name="Close_Ord_OnPrn" Type="bit" Nullable="false" />
+          <Property Name="AutoForm_Parts" Type="bit" Nullable="false" />
+          <Property Name="Clients_List_No" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="Work_Planning" Type="bit" />
+          <Property Name="Team_No" Type="numeric" Precision="15" Scale="0" />
+          <Property Name="Empl_Name" Type="varchar" MaxLength="101" />
+          <Property Name="UseCarsColors" Type="bit" Nullable="false" />
+          <Property Name="Client_Cards" Type="bit" Nullable="false" />
+          <Property Name="Stock_Use_Calc_Km" Type="bit" Nullable="false" />
+          <Property Name="Group_Code" Type="decimal" Precision="15" Scale="0" />
+          <Property Name="Store_ETC" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="Vat_Perc" Type="decimal" Precision="5" Scale="4" Nullable="false" />
+          <Property Name="TimeMultiplierForQuant" Type="float" />
+          <Property Name="AdvancedWorkPlanning" Type="bit" Nullable="false" />
+          <Property Name="Oper_Typ" Type="decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="GMIntegration" Type="bit" Nullable="false" />
+          <Property Name="ContactCheckType" Type="smallint" Nullable="false" />
+          <Property Name="Repeated_Visit_Days" Type="smallint" Nullable="false" />
+          <Property Name="Fixed_Repeated_Visit_Reason" Type="bit" Nullable="false" />
+          <Property Name="ShowAllStores" Type="bit" Nullable="false" />
+          <Property Name="CheckAllCodes" Type="bit" Nullable="false" />
+          <Property Name="Order_Menu_Permisions" Type="bit" Nullable="false" />
+          <Property Name="Show_All_Reminders_Order" Type="bit" Nullable="false" />
+          <Property Name="No_KM_Orders" Type="bit" Nullable="false" />
+          <Property Name="EMPL_USERN" Type="varchar" MaxLength="50" />
+          <Property Name="OldOrdersBackground" Type="int" />
+          <Property Name="OldOrdersForeColor" Type="int" />
+          <Property Name="FIRM" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LogDAT" Type="bit" Nullable="false" />
+          <Property Name="Warranty_Split" Type="numeric" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Car_Subscr_Split" Type="numeric" Precision="6" Scale="0" />
+          <Property Name="Dealer_No" Type="numeric" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="ShowAllTasks" Type="bit" Nullable="false" />
+          <Property Name="Employee_GUID" Type="uniqueidentifier" />
+          <Property Name="CarsInsuranceInfo" Type="bit" Nullable="false" />
+          <Property Name="FiscalDeviceID" Type="int" />
+          <Property Name="CodeFiscal" Type="int" />
+          <Property Name="N18Active" Type="bit" Nullable="false" />
+          <Property Name="ColorOrdersOnFlag" Type="bit" Nullable="false" />
+          <Property Name="CheckDuplicateOrders" Type="bit" Nullable="false" />
+          <Property Name="ShowNotesClient" Type="bit" Nullable="false" />
+          <Property Name="ShowItemsSearch" Type="bit" Nullable="false" />
+          <Property Name="CheckGDPROrders" Type="bit" Nullable="false" />
+          <Property Name="ProposeCarModel" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Store.dbo.Order_Print_Header' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="Order_Print_Header">
+          <Key>
+            <PropertyRef Name="Service" />
+            <PropertyRef Name="Order_No" />
+            <PropertyRef Name="Split" />
+            <PropertyRef Name="Date_Created" />
+            <PropertyRef Name="Last_KM" />
+            <PropertyRef Name="Client_No" />
+            <PropertyRef Name="Secret_Bolts" />
+            <PropertyRef Name="Fuel_Quant" />
+            <PropertyRef Name="Return_Old_Parts" />
+            <PropertyRef Name="Saler_Firm" />
+            <PropertyRef Name="ORDER_STATUS" />
+            <PropertyRef Name="Order_Status_Name" />
+            <PropertyRef Name="VAT" />
+            <PropertyRef Name="VAT_PERC" />
+          </Key>
+          <Property Name="Service" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Order_No" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Split" Type="decimal" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Split_Name" Type="varchar" MaxLength="50" />
+          <Property Name="Order_ID" Type="numeric" Precision="6" Scale="0" />
+          <Property Name="Empl_Name" Type="varchar" MaxLength="101" />
+          <Property Name="Empl_Full_Name" Type="varchar" MaxLength="152" />
+          <Property Name="EmplPhone" Type="varchar" MaxLength="50" />
+          <Property Name="EmplMobile" Type="varchar" MaxLength="50" />
+          <Property Name="EmplEmail" Type="varchar" MaxLength="100" />
+          <Property Name="Date_Created" Type="datetime" Nullable="false" />
+          <Property Name="Date_End_Plan" Type="datetime" />
+          <Property Name="Plate_Nr" Type="varchar" MaxLength="50" />
+          <Property Name="Last_KM" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="KM_Out" Type="numeric" Precision="10" Scale="0" />
+          <Property Name="Reg_Date" Type="datetime" />
+          <Property Name="Model" Type="varchar" MaxLength="50" />
+          <Property Name="Make" Type="varchar" MaxLength="255" />
+          <Property Name="Engine_Nr" Type="varchar" MaxLength="30" />
+          <Property Name="Vin_Nr" Type="varchar" MaxLength="40" />
+          <Property Name="Contract_No" Type="varchar" MaxLength="20" />
+          <Property Name="Discount_Group_Exp_Date" Type="datetime" />
+          <Property Name="Client_No" Type="decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="Firm" Type="varchar" MaxLength="75" />
+          <Property Name="City" Type="varchar" MaxLength="25" />
+          <Property Name="Address1" Type="varchar" MaxLength="50" />
+          <Property Name="Vat_No" Type="varchar" MaxLength="15" />
+          <Property Name="Bulstat" Type="varchar" MaxLength="15" />
+          <Property Name="Secret_Bolts" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Fuel_Quant" Type="numeric" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="Notes_Exterior" Type="varchar" MaxLength="150" />
+          <Property Name="Return_Old_Parts" Type="varchar" MaxLength="2" Nullable="false" />
+          <Property Name="Phone" Type="varchar" MaxLength="25" />
+          <Property Name="Represent" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Saler_Firm" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Saler_City" Type="varchar" MaxLength="25" />
+          <Property Name="Saler_Address" Type="varchar" MaxLength="102" />
+          <Property Name="TaxIdent" Type="varchar" MaxLength="33" />
+          <Property Name="Saler_Phone" Type="varchar" MaxLength="20" />
+          <Property Name="Order_No1" Type="varchar" MaxLength="61" />
+          <Property Name="Service_Name" Type="varchar" MaxLength="81" />
+          <Property Name="Saler_EMail" Type="varchar" MaxLength="50" />
+          <Property Name="Saler_Web_Site" Type="varchar" MaxLength="150" />
+          <Property Name="Order_ID_Full" Type="varchar" MaxLength="20" />
+          <Property Name="Ref_No" Type="varchar" MaxLength="50" />
+          <Property Name="Car_Resp" Type="varchar" MaxLength="50" />
+          <Property Name="Add_Text" Type="varchar" MaxLength="1000" />
+          <Property Name="OwnerFirm" Type="varchar" MaxLength="75" />
+          <Property Name="OwnerPhone" Type="varchar" MaxLength="25" />
+          <Property Name="OwnerEmail" Type="varchar" MaxLength="50" />
+          <Property Name="UserFirm" Type="varchar" MaxLength="75" />
+          <Property Name="UserPhone" Type="varchar" MaxLength="25" />
+          <Property Name="UserEmail" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Names" Type="varchar" MaxLength="112" />
+          <Property Name="Contact_Email" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Mobile" Type="varchar" MaxLength="50" />
+          <Property Name="Contact_Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Body_Color" Type="varchar" MaxLength="10" />
+          <Property Name="NOTES" Type="varchar" MaxLength="255" />
+          <Property Name="ORDER_STATUS" Type="decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="Order_Status_Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="VAT" Type="decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="VAT_PERC" Type="decimal" Precision="5" Scale="4" Nullable="false" />
+          <Property Name="InvoiceTo" Type="numeric" Precision="15" Scale="0" />
+          <Property Name="InvoiceToFirm" Type="varchar" MaxLength="75" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'Store.dbo.zMVBOrders_p' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="zMVBOrders_p">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="ORDER_NO" />
+            <PropertyRef Name="SERVICE" />
+            <PropertyRef Name="SPLIT" />
+            <PropertyRef Name="DESCRIPTION" />
+            <PropertyRef Name="QUANT" />
+            <PropertyRef Name="PRICE" />
+            <PropertyRef Name="DISCOUNT" />
+            <PropertyRef Name="SUMM" />
+            <PropertyRef Name="ORDERP_TYPE" />
+            <PropertyRef Name="STATUS" />
+          </Key>
+          <Property Name="ID" Type="decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="ORDER_NO" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="SERVICE" Type="decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="SPLIT" Type="decimal" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="CODE" Type="varchar" MaxLength="25" />
+          <Property Name="DESCRIPTION" Type="varchar" MaxLength="160" Nullable="false" />
+          <Property Name="QUANT" Type="decimal" Precision="14" Scale="4" Nullable="false" />
+          <Property Name="PRICE" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="DISCOUNT" Type="decimal" Precision="5" Scale="4" Nullable="false" />
+          <Property Name="SUMM" Type="decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="ORDERP_TYPE" Type="decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="STATUS" Type="decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="STORE" Type="decimal" Precision="10" Scale="0" />
+          <Property Name="empl_id" Type="decimal" Precision="6" Scale="0" />
+          <Property Name="JobID" Type="int" />
+        </EntityType>
+        <Function Name="zMVB_Print_PS" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Service" Type="numeric" Mode="In" />
+          <Parameter Name="Order_No" Type="numeric" Mode="In" />
+        </Function>
+        <Function Name="zMVBOrderHeader" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="Service" Type="numeric" Mode="In" />
+          <Parameter Name="Order_No" Type="numeric" Mode="In" />
+          <Parameter Name="Split" Type="numeric" Mode="In" />
+        </Function>
+        <EntityContainer Name="StoreModelStoreContainer">
+          <EntitySet Name="TmpPrintOrder" EntityType="Self.TmpPrintOrder" Schema="dbo" store:Type="Tables" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" />
+          <EntitySet Name="Cars_List" EntityType="Self.Cars_List" store:Type="Views" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+    [Cars_List].[Plate_Nr] AS [Plate_Nr], 
+    [Cars_List].[Vin_Typ] AS [Vin_Typ], 
+    [Cars_List].[Vin_Nr] AS [Vin_Nr], 
+    [Cars_List].[Engine_Nr] AS [Engine_Nr], 
+    [Cars_List].[Firm_Code] AS [Firm_Code], 
+    [Cars_List].[Car_User_Code] AS [Car_User_Code], 
+    [Cars_List].[Firm] AS [Firm], 
+    [Cars_List].[User_Firm] AS [User_Firm], 
+    [Cars_List].[Old_Client_Nr] AS [Old_Client_Nr], 
+    [Cars_List].[Resp] AS [Resp], 
+    [Cars_List].[Contract_No] AS [Contract_No], 
+    [Cars_List].[Discount_Group_Exp_Date] AS [Discount_Group_Exp_Date], 
+    [Cars_List].[Discount_Group] AS [Discount_Group], 
+    [Cars_List].[Body_Color] AS [Body_Color], 
+    [Cars_List].[Upholst_Color] AS [Upholst_Color], 
+    [Cars_List].[Model_Name] AS [Model_Name], 
+    [Cars_List].[Make] AS [Make], 
+    [Cars_List].[Model] AS [Model], 
+    [Cars_List].[Model_No] AS [Model_No], 
+    [Cars_List].[Model_Index] AS [Model_Index], 
+    [Cars_List].[Reg_Date] AS [Reg_Date], 
+    [Cars_List].[Notes] AS [Notes], 
+    [Cars_List].[Reminder] AS [Reminder], 
+    [Cars_List].[Last_Visit] AS [Last_Visit], 
+    [Cars_List].[Last_KM] AS [Last_KM], 
+    [Cars_List].[Date_Created] AS [Date_Created], 
+    [Cars_List].[Empl_No_Created] AS [Empl_No_Created], 
+    [Cars_List].[Empl_Name_Created] AS [Empl_Name_Created], 
+    [Cars_List].[Date_Last_Update] AS [Date_Last_Update], 
+    [Cars_List].[Empl_No_Updated] AS [Empl_No_Updated], 
+    [Cars_List].[Empl_Name_Updated] AS [Empl_Name_Updated], 
+    [Cars_List].[Warranty_Start_Date] AS [Warranty_Start_Date], 
+    [Cars_List].[Warranty_End_Date] AS [Warranty_End_Date], 
+    [Cars_List].[Serie] AS [Serie], 
+    [Cars_List].[Dev_Serie] AS [Dev_Serie], 
+    [Cars_List].[Engine_Typ] AS [Engine_Typ], 
+    [Cars_List].[Transmission] AS [Transmission], 
+    [Cars_List].[Fuel] AS [Fuel], 
+    [Cars_List].[Body_Type] AS [Body_Type], 
+    [Cars_List].[City] AS [City], 
+    [Cars_List].[Postal_Code] AS [Postal_Code], 
+    [Cars_List].[Address1] AS [Address1], 
+    [Cars_List].[Phone] AS [Phone], 
+    [Cars_List].[Phone1] AS [Phone1], 
+    [Cars_List].[Fax] AS [Fax], 
+    [Cars_List].[Email] AS [Email], 
+    [Cars_List].[Represent] AS [Represent], 
+    [Cars_List].[Prezident] AS [Prezident], 
+    [Cars_List].[Address_Coresp] AS [Address_Coresp], 
+    [Cars_List].[User_City] AS [User_City], 
+    [Cars_List].[User_Postal_Code] AS [User_Postal_Code], 
+    [Cars_List].[User_Address] AS [User_Address], 
+    [Cars_List].[User_Phone] AS [User_Phone], 
+    [Cars_List].[User_Phone1] AS [User_Phone1], 
+    [Cars_List].[User_Fax] AS [User_Fax], 
+    [Cars_List].[User_Email] AS [User_Email], 
+    [Cars_List].[User_Represent] AS [User_Represent], 
+    [Cars_List].[User_Prezident] AS [User_Prezident], 
+    [Cars_List].[User_Address_Coresp] AS [User_Address_Coresp], 
+    [Cars_List].[Contact_ID] AS [Contact_ID], 
+    [Cars_List].[Title] AS [Title], 
+    [Cars_List].[First_Name] AS [First_Name], 
+    [Cars_List].[SurName] AS [SurName], 
+    [Cars_List].[Family] AS [Family], 
+    [Cars_List].[Contact_Names] AS [Contact_Names], 
+    [Cars_List].[Contact_Address] AS [Contact_Address], 
+    [Cars_List].[Contact_City] AS [Contact_City], 
+    [Cars_List].[Contact_Email] AS [Contact_Email], 
+    [Cars_List].[Contact_Fax] AS [Contact_Fax], 
+    [Cars_List].[Contact_Mobile] AS [Contact_Mobile], 
+    [Cars_List].[Contact_Phone] AS [Contact_Phone], 
+    [Cars_List].[Contact_Post_Code] AS [Contact_Post_Code], 
+    [Cars_List].[Company] AS [Company], 
+    [Cars_List].[Buis_Pers] AS [Buis_Pers], 
+    [Cars_List].[Preff_Contact] AS [Preff_Contact], 
+    [Cars_List].[Preff_Contact_Name] AS [Preff_Contact_Name], 
+    [Cars_List].[Personal] AS [Personal], 
+    [Cars_List].[Contact_Relation] AS [Contact_Relation], 
+    [Cars_List].[Contact_Relation_Name] AS [Contact_Relation_Name], 
+    [Cars_List].[DailyKM] AS [DailyKM], 
+    [Cars_List].[DailyKMCalcDate] AS [DailyKMCalcDate], 
+    [Cars_List].[Expected_KM] AS [Expected_KM], 
+    [Cars_List].[isResource] AS [isResource], 
+    [Cars_List].[CarGUID] AS [CarGUID], 
+    [Cars_List].[InsBroker] AS [InsBroker], 
+    [Cars_List].[InsBrokerOffer] AS [InsBrokerOffer], 
+    [Cars_List].[SalesChannel] AS [SalesChannel], 
+    [Cars_List].[Client_Group_Owner] AS [Client_Group_Owner], 
+    [Cars_List].[Client_Group_User] AS [Client_Group_User], 
+    [Cars_List].[Deff_Service] AS [Deff_Service], 
+    [Cars_List].[Deff_Split] AS [Deff_Split], 
+    [Cars_List].[Full_Vin] AS [Full_Vin], 
+    [Cars_List].[OwnerConsent] AS [OwnerConsent], 
+    [Cars_List].[UserConsent] AS [UserConsent], 
+    [Cars_List].[Contr_Type] AS [Contr_Type], 
+    [Cars_List].[Contr_Type_Name] AS [Contr_Type_Name], 
+    [Cars_List].[User_Contr_Type] AS [User_Contr_Type], 
+    [Cars_List].[User_Contr_Type_Name] AS [User_Contr_Type_Name]
+    FROM [dbo].[Cars_List] AS [Cars_List]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Empl_Summary" EntityType="Self.Empl_Summary" store:Type="Views" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+    [Empl_Summary].[Empl_Code] AS [Empl_Code], 
+    [Empl_Summary].[Store] AS [Store], 
+    [Empl_Summary].[Service] AS [Service], 
+    [Empl_Summary].[Saler] AS [Saler], 
+    [Empl_Summary].[Stock_Op] AS [Stock_Op], 
+    [Empl_Summary].[ShowAllSplits] AS [ShowAllSplits], 
+    [Empl_Summary].[CloseAllSplits] AS [CloseAllSplits], 
+    [Empl_Summary].[Show_All_Parts] AS [Show_All_Parts], 
+    [Empl_Summary].[Warr_Stamps] AS [Warr_Stamps], 
+    [Empl_Summary].[Deff_Split] AS [Deff_Split], 
+    [Empl_Summary].[Log_Cars] AS [Log_Cars], 
+    [Empl_Summary].[Close_Ord_OnPrn] AS [Close_Ord_OnPrn], 
+    [Empl_Summary].[AutoForm_Parts] AS [AutoForm_Parts], 
+    [Empl_Summary].[Clients_List_No] AS [Clients_List_No], 
+    [Empl_Summary].[Work_Planning] AS [Work_Planning], 
+    [Empl_Summary].[Team_No] AS [Team_No], 
+    [Empl_Summary].[Empl_Name] AS [Empl_Name], 
+    [Empl_Summary].[UseCarsColors] AS [UseCarsColors], 
+    [Empl_Summary].[Client_Cards] AS [Client_Cards], 
+    [Empl_Summary].[Stock_Use_Calc_Km] AS [Stock_Use_Calc_Km], 
+    [Empl_Summary].[Group_Code] AS [Group_Code], 
+    [Empl_Summary].[Store_ETC] AS [Store_ETC], 
+    [Empl_Summary].[Vat_Perc] AS [Vat_Perc], 
+    [Empl_Summary].[TimeMultiplierForQuant] AS [TimeMultiplierForQuant], 
+    [Empl_Summary].[AdvancedWorkPlanning] AS [AdvancedWorkPlanning], 
+    [Empl_Summary].[Oper_Typ] AS [Oper_Typ], 
+    [Empl_Summary].[GMIntegration] AS [GMIntegration], 
+    [Empl_Summary].[ContactCheckType] AS [ContactCheckType], 
+    [Empl_Summary].[Repeated_Visit_Days] AS [Repeated_Visit_Days], 
+    [Empl_Summary].[Fixed_Repeated_Visit_Reason] AS [Fixed_Repeated_Visit_Reason], 
+    [Empl_Summary].[ShowAllStores] AS [ShowAllStores], 
+    [Empl_Summary].[CheckAllCodes] AS [CheckAllCodes], 
+    [Empl_Summary].[Order_Menu_Permisions] AS [Order_Menu_Permisions], 
+    [Empl_Summary].[Show_All_Reminders_Order] AS [Show_All_Reminders_Order], 
+    [Empl_Summary].[No_KM_Orders] AS [No_KM_Orders], 
+    [Empl_Summary].[EMPL_USERN] AS [EMPL_USERN], 
+    [Empl_Summary].[OldOrdersBackground] AS [OldOrdersBackground], 
+    [Empl_Summary].[OldOrdersForeColor] AS [OldOrdersForeColor], 
+    [Empl_Summary].[FIRM] AS [FIRM], 
+    [Empl_Summary].[LogDAT] AS [LogDAT], 
+    [Empl_Summary].[Warranty_Split] AS [Warranty_Split], 
+    [Empl_Summary].[Car_Subscr_Split] AS [Car_Subscr_Split], 
+    [Empl_Summary].[Dealer_No] AS [Dealer_No], 
+    [Empl_Summary].[ShowAllTasks] AS [ShowAllTasks], 
+    [Empl_Summary].[Employee_GUID] AS [Employee_GUID], 
+    [Empl_Summary].[CarsInsuranceInfo] AS [CarsInsuranceInfo], 
+    [Empl_Summary].[FiscalDeviceID] AS [FiscalDeviceID], 
+    [Empl_Summary].[CodeFiscal] AS [CodeFiscal], 
+    [Empl_Summary].[N18Active] AS [N18Active], 
+    [Empl_Summary].[ColorOrdersOnFlag] AS [ColorOrdersOnFlag], 
+    [Empl_Summary].[CheckDuplicateOrders] AS [CheckDuplicateOrders], 
+    [Empl_Summary].[ShowNotesClient] AS [ShowNotesClient], 
+    [Empl_Summary].[ShowItemsSearch] AS [ShowItemsSearch], 
+    [Empl_Summary].[CheckGDPROrders] AS [CheckGDPROrders], 
+    [Empl_Summary].[ProposeCarModel] AS [ProposeCarModel]
+    FROM [dbo].[Empl_Summary] AS [Empl_Summary]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="Order_Print_Header" EntityType="Self.Order_Print_Header" store:Type="Views" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+    [Order_Print_Header].[Service] AS [Service], 
+    [Order_Print_Header].[Order_No] AS [Order_No], 
+    [Order_Print_Header].[Split] AS [Split], 
+    [Order_Print_Header].[Split_Name] AS [Split_Name], 
+    [Order_Print_Header].[Order_ID] AS [Order_ID], 
+    [Order_Print_Header].[Empl_Name] AS [Empl_Name], 
+    [Order_Print_Header].[Empl_Full_Name] AS [Empl_Full_Name], 
+    [Order_Print_Header].[EmplPhone] AS [EmplPhone], 
+    [Order_Print_Header].[EmplMobile] AS [EmplMobile], 
+    [Order_Print_Header].[EmplEmail] AS [EmplEmail], 
+    [Order_Print_Header].[Date_Created] AS [Date_Created], 
+    [Order_Print_Header].[Date_End_Plan] AS [Date_End_Plan], 
+    [Order_Print_Header].[Plate_Nr] AS [Plate_Nr], 
+    [Order_Print_Header].[Last_KM] AS [Last_KM], 
+    [Order_Print_Header].[KM_Out] AS [KM_Out], 
+    [Order_Print_Header].[Reg_Date] AS [Reg_Date], 
+    [Order_Print_Header].[Model] AS [Model], 
+    [Order_Print_Header].[Make] AS [Make], 
+    [Order_Print_Header].[Engine_Nr] AS [Engine_Nr], 
+    [Order_Print_Header].[Vin_Nr] AS [Vin_Nr], 
+    [Order_Print_Header].[Contract_No] AS [Contract_No], 
+    [Order_Print_Header].[Discount_Group_Exp_Date] AS [Discount_Group_Exp_Date], 
+    [Order_Print_Header].[Client_No] AS [Client_No], 
+    [Order_Print_Header].[Firm] AS [Firm], 
+    [Order_Print_Header].[City] AS [City], 
+    [Order_Print_Header].[Address1] AS [Address1], 
+    [Order_Print_Header].[Vat_No] AS [Vat_No], 
+    [Order_Print_Header].[Bulstat] AS [Bulstat], 
+    [Order_Print_Header].[Secret_Bolts] AS [Secret_Bolts], 
+    [Order_Print_Header].[Fuel_Quant] AS [Fuel_Quant], 
+    [Order_Print_Header].[Notes_Exterior] AS [Notes_Exterior], 
+    [Order_Print_Header].[Return_Old_Parts] AS [Return_Old_Parts], 
+    [Order_Print_Header].[Phone] AS [Phone], 
+    [Order_Print_Header].[Represent] AS [Represent], 
+    [Order_Print_Header].[Email] AS [Email], 
+    [Order_Print_Header].[Saler_Firm] AS [Saler_Firm], 
+    [Order_Print_Header].[Saler_City] AS [Saler_City], 
+    [Order_Print_Header].[Saler_Address] AS [Saler_Address], 
+    [Order_Print_Header].[TaxIdent] AS [TaxIdent], 
+    [Order_Print_Header].[Saler_Phone] AS [Saler_Phone], 
+    [Order_Print_Header].[Order_No1] AS [Order_No1], 
+    [Order_Print_Header].[Service_Name] AS [Service_Name], 
+    [Order_Print_Header].[Saler_EMail] AS [Saler_EMail], 
+    [Order_Print_Header].[Saler_Web_Site] AS [Saler_Web_Site], 
+    [Order_Print_Header].[Order_ID_Full] AS [Order_ID_Full], 
+    [Order_Print_Header].[Ref_No] AS [Ref_No], 
+    [Order_Print_Header].[Car_Resp] AS [Car_Resp], 
+    [Order_Print_Header].[Add_Text] AS [Add_Text], 
+    [Order_Print_Header].[OwnerFirm] AS [OwnerFirm], 
+    [Order_Print_Header].[OwnerPhone] AS [OwnerPhone], 
+    [Order_Print_Header].[OwnerEmail] AS [OwnerEmail], 
+    [Order_Print_Header].[UserFirm] AS [UserFirm], 
+    [Order_Print_Header].[UserPhone] AS [UserPhone], 
+    [Order_Print_Header].[UserEmail] AS [UserEmail], 
+    [Order_Print_Header].[Contact_Names] AS [Contact_Names], 
+    [Order_Print_Header].[Contact_Email] AS [Contact_Email], 
+    [Order_Print_Header].[Contact_Mobile] AS [Contact_Mobile], 
+    [Order_Print_Header].[Contact_Phone] AS [Contact_Phone], 
+    [Order_Print_Header].[Body_Color] AS [Body_Color], 
+    [Order_Print_Header].[NOTES] AS [NOTES], 
+    [Order_Print_Header].[ORDER_STATUS] AS [ORDER_STATUS], 
+    [Order_Print_Header].[Order_Status_Name] AS [Order_Status_Name], 
+    [Order_Print_Header].[VAT] AS [VAT], 
+    [Order_Print_Header].[VAT_PERC] AS [VAT_PERC], 
+    [Order_Print_Header].[InvoiceTo] AS [InvoiceTo], 
+    [Order_Print_Header].[InvoiceToFirm] AS [InvoiceToFirm]
+    FROM [dbo].[Order_Print_Header] AS [Order_Print_Header]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="zMVBOrders_p" EntityType="Self.zMVBOrders_p" store:Type="Views" store:Schema="dbo" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator">
+            <DefiningQuery>SELECT 
+    [zMVBOrders_p].[ID] AS [ID], 
+    [zMVBOrders_p].[ORDER_NO] AS [ORDER_NO], 
+    [zMVBOrders_p].[SERVICE] AS [SERVICE], 
+    [zMVBOrders_p].[SPLIT] AS [SPLIT], 
+    [zMVBOrders_p].[CODE] AS [CODE], 
+    [zMVBOrders_p].[DESCRIPTION] AS [DESCRIPTION], 
+    [zMVBOrders_p].[QUANT] AS [QUANT], 
+    [zMVBOrders_p].[PRICE] AS [PRICE], 
+    [zMVBOrders_p].[DISCOUNT] AS [DISCOUNT], 
+    [zMVBOrders_p].[SUMM] AS [SUMM], 
+    [zMVBOrders_p].[ORDERP_TYPE] AS [ORDERP_TYPE], 
+    [zMVBOrders_p].[STATUS] AS [STATUS], 
+    [zMVBOrders_p].[STORE] AS [STORE], 
+    [zMVBOrders_p].[empl_id] AS [empl_id], 
+    [zMVBOrders_p].[JobID] AS [JobID]
+    FROM [dbo].[zMVBOrders_p] AS [zMVBOrders_p]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StoreModel" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2006/04/edm" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+        <EntityType Name="TmpPrintOrder">
+          <Key>
+            <PropertyRef Name="USERN" />
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="USERN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="Code" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Quant" Type="Decimal" Precision="14" Scale="4" />
+          <Property Name="Price" Type="Decimal" Precision="15" Scale="2" />
+          <Property Name="Type" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Empl_ID" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="Empl_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="start_t" Type="DateTime" Precision="3" />
+          <Property Name="Stop_T" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Cars_List">
+          <Key>
+            <PropertyRef Name="Plate_Nr" />
+            <PropertyRef Name="Vin_Nr" />
+            <PropertyRef Name="Firm_Code" />
+            <PropertyRef Name="Car_User_Code" />
+            <PropertyRef Name="Date_Created" />
+            <PropertyRef Name="Empl_No_Created" />
+            <PropertyRef Name="Date_Last_Update" />
+            <PropertyRef Name="Empl_No_Updated" />
+            <PropertyRef Name="isResource" />
+            <PropertyRef Name="Client_Group_Owner" />
+            <PropertyRef Name="Client_Group_User" />
+            <PropertyRef Name="Full_Vin" />
+            <PropertyRef Name="Contr_Type" />
+            <PropertyRef Name="Contr_Type_Name" />
+            <PropertyRef Name="User_Contr_Type" />
+            <PropertyRef Name="User_Contr_Type_Name" />
+          </Key>
+          <Property Name="Plate_Nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Vin_Typ" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Vin_Nr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Engine_Nr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Firm_Code" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="Car_User_Code" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="Firm" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="User_Firm" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="Old_Client_Nr" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="Resp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contract_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Discount_Group_Exp_Date" Type="DateTime" Precision="3" />
+          <Property Name="Discount_Group" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Body_Color" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Upholst_Color" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Model_Name" Type="String" MaxLength="306" FixedLength="false" Unicode="false" />
+          <Property Name="Make" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Model_No" Type="Decimal" Precision="15" Scale="0" />
+          <Property Name="Model_Index" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Reg_Date" Type="DateTime" Precision="3" />
+          <Property Name="Notes" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Reminder" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Last_Visit" Type="DateTime" Precision="3" />
+          <Property Name="Last_KM" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Date_Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Empl_No_Created" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Empl_Name_Created" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Last_Update" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Empl_No_Updated" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Empl_Name_Updated" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="Warranty_Start_Date" Type="DateTime" Precision="3" />
+          <Property Name="Warranty_End_Date" Type="DateTime" Precision="3" />
+          <Property Name="Serie" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Dev_Serie" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+          <Property Name="Engine_Typ" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Transmission" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fuel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Body_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Postal_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Address1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Phone1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Fax" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Represent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Prezident" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address_Coresp" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="User_City" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="User_Postal_Code" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="User_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="User_Phone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="User_Phone1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="User_Fax" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="User_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="User_Represent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="User_Prezident" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="User_Address_Coresp" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_ID" Type="Int32" />
+          <Property Name="Title" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="First_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SurName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Family" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Names" Type="String" MaxLength="112" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Fax" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Post_Code" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="Company" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Buis_Pers" Type="Boolean" />
+          <Property Name="Preff_Contact" Type="Byte" />
+          <Property Name="Preff_Contact_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Personal" Type="Boolean" />
+          <Property Name="Contact_Relation" Type="Decimal" Precision="15" Scale="0" />
+          <Property Name="Contact_Relation_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DailyKM" Type="Double" />
+          <Property Name="DailyKMCalcDate" Type="DateTime" Precision="3" />
+          <Property Name="Expected_KM" Type="Double" />
+          <Property Name="isResource" Type="Boolean" Nullable="false" />
+          <Property Name="CarGUID" Type="Guid" />
+          <Property Name="InsBroker" Type="Decimal" Precision="15" Scale="0" />
+          <Property Name="InsBrokerOffer" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SalesChannel" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Client_Group_Owner" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Client_Group_User" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Deff_Service" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Deff_Split" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="Full_Vin" Type="String" MaxLength="40" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="OwnerConsent" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="UserConsent" Type="String" MaxLength="4000" FixedLength="false" Unicode="false" />
+          <Property Name="Contr_Type" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="Contr_Type_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="User_Contr_Type" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="User_Contr_Type_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Empl_Summary">
+          <Key>
+            <PropertyRef Name="Empl_Code" />
+            <PropertyRef Name="Store" />
+            <PropertyRef Name="Service" />
+            <PropertyRef Name="Saler" />
+            <PropertyRef Name="Stock_Op" />
+            <PropertyRef Name="Close_Ord_OnPrn" />
+            <PropertyRef Name="AutoForm_Parts" />
+            <PropertyRef Name="UseCarsColors" />
+            <PropertyRef Name="Client_Cards" />
+            <PropertyRef Name="Stock_Use_Calc_Km" />
+            <PropertyRef Name="Vat_Perc" />
+            <PropertyRef Name="AdvancedWorkPlanning" />
+            <PropertyRef Name="Oper_Typ" />
+            <PropertyRef Name="GMIntegration" />
+            <PropertyRef Name="ContactCheckType" />
+            <PropertyRef Name="Repeated_Visit_Days" />
+            <PropertyRef Name="Fixed_Repeated_Visit_Reason" />
+            <PropertyRef Name="ShowAllStores" />
+            <PropertyRef Name="CheckAllCodes" />
+            <PropertyRef Name="Order_Menu_Permisions" />
+            <PropertyRef Name="Show_All_Reminders_Order" />
+            <PropertyRef Name="No_KM_Orders" />
+            <PropertyRef Name="FIRM" />
+            <PropertyRef Name="LogDAT" />
+            <PropertyRef Name="Warranty_Split" />
+            <PropertyRef Name="Dealer_No" />
+            <PropertyRef Name="ShowAllTasks" />
+            <PropertyRef Name="CarsInsuranceInfo" />
+            <PropertyRef Name="N18Active" />
+            <PropertyRef Name="ColorOrdersOnFlag" />
+            <PropertyRef Name="CheckDuplicateOrders" />
+            <PropertyRef Name="ShowNotesClient" />
+            <PropertyRef Name="ShowItemsSearch" />
+            <PropertyRef Name="CheckGDPROrders" />
+            <PropertyRef Name="ProposeCarModel" />
+          </Key>
+          <Property Name="Empl_Code" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Store" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Service" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Saler" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Stock_Op" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="ShowAllSplits" Type="Boolean" />
+          <Property Name="CloseAllSplits" Type="Boolean" />
+          <Property Name="Show_All_Parts" Type="Boolean" />
+          <Property Name="Warr_Stamps" Type="Boolean" />
+          <Property Name="Deff_Split" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="Log_Cars" Type="Boolean" />
+          <Property Name="Close_Ord_OnPrn" Type="Boolean" Nullable="false" />
+          <Property Name="AutoForm_Parts" Type="Boolean" Nullable="false" />
+          <Property Name="Clients_List_No" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Work_Planning" Type="Boolean" />
+          <Property Name="Team_No" Type="Decimal" Precision="15" Scale="0" />
+          <Property Name="Empl_Name" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="UseCarsColors" Type="Boolean" Nullable="false" />
+          <Property Name="Client_Cards" Type="Boolean" Nullable="false" />
+          <Property Name="Stock_Use_Calc_Km" Type="Boolean" Nullable="false" />
+          <Property Name="Group_Code" Type="Decimal" Precision="15" Scale="0" />
+          <Property Name="Store_ETC" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Vat_Perc" Type="Decimal" Precision="5" Scale="4" Nullable="false" />
+          <Property Name="TimeMultiplierForQuant" Type="Double" />
+          <Property Name="AdvancedWorkPlanning" Type="Boolean" Nullable="false" />
+          <Property Name="Oper_Typ" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="GMIntegration" Type="Boolean" Nullable="false" />
+          <Property Name="ContactCheckType" Type="Int16" Nullable="false" />
+          <Property Name="Repeated_Visit_Days" Type="Int16" Nullable="false" />
+          <Property Name="Fixed_Repeated_Visit_Reason" Type="Boolean" Nullable="false" />
+          <Property Name="ShowAllStores" Type="Boolean" Nullable="false" />
+          <Property Name="CheckAllCodes" Type="Boolean" Nullable="false" />
+          <Property Name="Order_Menu_Permisions" Type="Boolean" Nullable="false" />
+          <Property Name="Show_All_Reminders_Order" Type="Boolean" Nullable="false" />
+          <Property Name="No_KM_Orders" Type="Boolean" Nullable="false" />
+          <Property Name="EMPL_USERN" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OldOrdersBackground" Type="Int32" />
+          <Property Name="OldOrdersForeColor" Type="Int32" />
+          <Property Name="FIRM" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LogDAT" Type="Boolean" Nullable="false" />
+          <Property Name="Warranty_Split" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Car_Subscr_Split" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="Dealer_No" Type="Decimal" Precision="5" Scale="0" Nullable="false" />
+          <Property Name="ShowAllTasks" Type="Boolean" Nullable="false" />
+          <Property Name="Employee_GUID" Type="Guid" />
+          <Property Name="CarsInsuranceInfo" Type="Boolean" Nullable="false" />
+          <Property Name="FiscalDeviceID" Type="Int32" />
+          <Property Name="CodeFiscal" Type="Int32" />
+          <Property Name="N18Active" Type="Boolean" Nullable="false" />
+          <Property Name="ColorOrdersOnFlag" Type="Boolean" Nullable="false" />
+          <Property Name="CheckDuplicateOrders" Type="Boolean" Nullable="false" />
+          <Property Name="ShowNotesClient" Type="Boolean" Nullable="false" />
+          <Property Name="ShowItemsSearch" Type="Boolean" Nullable="false" />
+          <Property Name="CheckGDPROrders" Type="Boolean" Nullable="false" />
+          <Property Name="ProposeCarModel" Type="Boolean" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Order_Print_Header">
+          <Key>
+            <PropertyRef Name="Service" />
+            <PropertyRef Name="Order_No" />
+            <PropertyRef Name="Split" />
+            <PropertyRef Name="Date_Created" />
+            <PropertyRef Name="Last_KM" />
+            <PropertyRef Name="Client_No" />
+            <PropertyRef Name="Secret_Bolts" />
+            <PropertyRef Name="Fuel_Quant" />
+            <PropertyRef Name="Return_Old_Parts" />
+            <PropertyRef Name="Saler_Firm" />
+            <PropertyRef Name="ORDER_STATUS" />
+            <PropertyRef Name="Order_Status_Name" />
+            <PropertyRef Name="VAT" />
+            <PropertyRef Name="VAT_PERC" />
+          </Key>
+          <Property Name="Service" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Order_No" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="Split" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="Split_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Order_ID" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="Empl_Name" Type="String" MaxLength="101" FixedLength="false" Unicode="false" />
+          <Property Name="Empl_Full_Name" Type="String" MaxLength="152" FixedLength="false" Unicode="false" />
+          <Property Name="EmplPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmplMobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="EmplEmail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Created" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Date_End_Plan" Type="DateTime" Precision="3" />
+          <Property Name="Plate_Nr" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Last_KM" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="KM_Out" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="Reg_Date" Type="DateTime" Precision="3" />
+          <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Make" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Engine_Nr" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="Vin_Nr" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="Contract_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Discount_Group_Exp_Date" Type="DateTime" Precision="3" />
+          <Property Name="Client_No" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="Firm" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="City" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Address1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Vat_No" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Bulstat" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="Secret_Bolts" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Fuel_Quant" Type="Decimal" Precision="2" Scale="0" Nullable="false" />
+          <Property Name="Notes_Exterior" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Return_Old_Parts" Type="String" MaxLength="2" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Phone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Represent" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Saler_Firm" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Saler_City" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="Saler_Address" Type="String" MaxLength="102" FixedLength="false" Unicode="false" />
+          <Property Name="TaxIdent" Type="String" MaxLength="33" FixedLength="false" Unicode="false" />
+          <Property Name="Saler_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Order_No1" Type="String" MaxLength="61" FixedLength="false" Unicode="false" />
+          <Property Name="Service_Name" Type="String" MaxLength="81" FixedLength="false" Unicode="false" />
+          <Property Name="Saler_EMail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Saler_Web_Site" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="Order_ID_Full" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Ref_No" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Car_Resp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Add_Text" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerFirm" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="OwnerEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="UserFirm" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+          <Property Name="UserPhone" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="UserEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Names" Type="String" MaxLength="112" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Contact_Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Body_Color" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="NOTES" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="ORDER_STATUS" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="Order_Status_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="VAT" Type="Decimal" Precision="1" Scale="0" Nullable="false" />
+          <Property Name="VAT_PERC" Type="Decimal" Precision="5" Scale="4" Nullable="false" />
+          <Property Name="InvoiceTo" Type="Decimal" Precision="15" Scale="0" />
+          <Property Name="InvoiceToFirm" Type="String" MaxLength="75" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="zMVBOrders_p">
+          <Key>
+            <PropertyRef Name="ID" />
+            <PropertyRef Name="ORDER_NO" />
+            <PropertyRef Name="SERVICE" />
+            <PropertyRef Name="SPLIT" />
+            <PropertyRef Name="DESCRIPTION" />
+            <PropertyRef Name="QUANT" />
+            <PropertyRef Name="PRICE" />
+            <PropertyRef Name="DISCOUNT" />
+            <PropertyRef Name="SUMM" />
+            <PropertyRef Name="ORDERP_TYPE" />
+            <PropertyRef Name="STATUS" />
+          </Key>
+          <Property Name="ID" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="ORDER_NO" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="SERVICE" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+          <Property Name="SPLIT" Type="Decimal" Precision="6" Scale="0" Nullable="false" />
+          <Property Name="CODE" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="DESCRIPTION" Type="String" MaxLength="160" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="QUANT" Type="Decimal" Precision="14" Scale="4" Nullable="false" />
+          <Property Name="PRICE" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="DISCOUNT" Type="Decimal" Precision="5" Scale="4" Nullable="false" />
+          <Property Name="SUMM" Type="Decimal" Precision="15" Scale="2" Nullable="false" />
+          <Property Name="ORDERP_TYPE" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="STATUS" Type="Decimal" Precision="15" Scale="0" Nullable="false" />
+          <Property Name="STORE" Type="Decimal" Precision="10" Scale="0" />
+          <Property Name="empl_id" Type="Decimal" Precision="6" Scale="0" />
+          <Property Name="JobID" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="StoreEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="TmpPrintOrder" EntityType="Self.TmpPrintOrder" />
+          <EntitySet Name="Cars_List" EntityType="Self.Cars_List" />
+          <EntitySet Name="Empl_Summary" EntityType="Self.Empl_Summary" />
+          <EntitySet Name="Order_Print_Header" EntityType="Self.Order_Print_Header" />
+          <EntitySet Name="zMVBOrders_p" EntityType="Self.zMVBOrders_p" />
+          <FunctionImport Name="zMVB_Print_PS" ReturnType="Collection(StoreModel.zMVB_Print_PS_Result)">
+            <Parameter Name="Service" Mode="In" Type="Decimal" />
+            <Parameter Name="Order_No" Mode="In" Type="Decimal" />
+          </FunctionImport>
+          <FunctionImport Name="zMVBOrderHeader" ReturnType="Collection(StoreModel.zMVBOrderHeader_Result)">
+            <Parameter Name="Service" Mode="In" Type="Decimal" />
+            <Parameter Name="Order_No" Mode="In" Type="Decimal" />
+            <Parameter Name="Split" Mode="In" Type="Decimal" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="zMVB_Print_PS_Result">
+          <Property Type="Decimal" Name="ID" Nullable="false" Precision="15" Scale="0" />
+          <Property Type="Decimal" Name="Split" Nullable="false" Precision="6" Scale="0" />
+          <Property Type="String" Name="CODE" Nullable="true" MaxLength="25" />
+          <Property Type="String" Name="DESCRIPTION" Nullable="false" MaxLength="160" />
+          <Property Type="Decimal" Name="QUANT" Nullable="false" Precision="14" Scale="4" />
+          <Property Type="String" Name="CONS" Nullable="true" MaxLength="25" />
+        </ComplexType>
+        <ComplexType Name="zMVBOrderHeader_Result">
+          <Property Type="String" Name="Model_Index" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="NotesCar" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="ReminderCar" Nullable="true" MaxLength="255" />
+          <Property Type="String" Name="NotesFirm" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="ReminderFirm" Nullable="true" MaxLength="1000" />
+          <Property Type="String" Name="PaymentTypeClient" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="PaymentTypeInvTo" Nullable="true" MaxLength="50" />
+          <Property Type="DateTime" Name="Date_CreatedLastOrder" Nullable="true" Precision="23" />
+          <Property Type="Decimal" Name="KMLastOrder" Nullable="true" Precision="10" Scale="0" />
+          <Property Type="String" Name="Empl_NameLastOrder" Nullable="true" MaxLength="101" />
+          <Property Type="String" Name="Contract_No" Nullable="true" MaxLength="255" />
+          <Property Type="Decimal" Name="Max_Credit" Nullable="false" Precision="15" Scale="2" />
+          <Property Type="Decimal" Name="Saldo" Nullable="true" Precision="15" Scale="2" />
+          <Property Type="String" Name="Client_Group" Nullable="true" MaxLength="50" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="urn:schemas-microsoft-com:windows:storage:mapping:CS">
+        <EntityContainerMapping StorageEntityContainer="StoreModelStoreContainer" CdmEntityContainer="StoreEntities1">
+          <EntitySetMapping Name="TmpPrintOrder">
+            <EntityTypeMapping TypeName="StoreModel.TmpPrintOrder">
+              <MappingFragment StoreEntitySet="TmpPrintOrder">
+                <ScalarProperty Name="USERN" ColumnName="USERN" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Quant" ColumnName="Quant" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Empl_ID" ColumnName="Empl_ID" />
+                <ScalarProperty Name="Empl_Name" ColumnName="Empl_Name" />
+                <ScalarProperty Name="start_t" ColumnName="start_t" />
+                <ScalarProperty Name="Stop_T" ColumnName="Stop_T" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Cars_List">
+            <EntityTypeMapping TypeName="StoreModel.Cars_List">
+              <MappingFragment StoreEntitySet="Cars_List">
+                <ScalarProperty Name="Plate_Nr" ColumnName="Plate_Nr" />
+                <ScalarProperty Name="Vin_Typ" ColumnName="Vin_Typ" />
+                <ScalarProperty Name="Vin_Nr" ColumnName="Vin_Nr" />
+                <ScalarProperty Name="Engine_Nr" ColumnName="Engine_Nr" />
+                <ScalarProperty Name="Firm_Code" ColumnName="Firm_Code" />
+                <ScalarProperty Name="Car_User_Code" ColumnName="Car_User_Code" />
+                <ScalarProperty Name="Firm" ColumnName="Firm" />
+                <ScalarProperty Name="User_Firm" ColumnName="User_Firm" />
+                <ScalarProperty Name="Old_Client_Nr" ColumnName="Old_Client_Nr" />
+                <ScalarProperty Name="Resp" ColumnName="Resp" />
+                <ScalarProperty Name="Contract_No" ColumnName="Contract_No" />
+                <ScalarProperty Name="Discount_Group_Exp_Date" ColumnName="Discount_Group_Exp_Date" />
+                <ScalarProperty Name="Discount_Group" ColumnName="Discount_Group" />
+                <ScalarProperty Name="Body_Color" ColumnName="Body_Color" />
+                <ScalarProperty Name="Upholst_Color" ColumnName="Upholst_Color" />
+                <ScalarProperty Name="Model_Name" ColumnName="Model_Name" />
+                <ScalarProperty Name="Make" ColumnName="Make" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Model_No" ColumnName="Model_No" />
+                <ScalarProperty Name="Model_Index" ColumnName="Model_Index" />
+                <ScalarProperty Name="Reg_Date" ColumnName="Reg_Date" />
+                <ScalarProperty Name="Notes" ColumnName="Notes" />
+                <ScalarProperty Name="Reminder" ColumnName="Reminder" />
+                <ScalarProperty Name="Last_Visit" ColumnName="Last_Visit" />
+                <ScalarProperty Name="Last_KM" ColumnName="Last_KM" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+                <ScalarProperty Name="Empl_No_Created" ColumnName="Empl_No_Created" />
+                <ScalarProperty Name="Empl_Name_Created" ColumnName="Empl_Name_Created" />
+                <ScalarProperty Name="Date_Last_Update" ColumnName="Date_Last_Update" />
+                <ScalarProperty Name="Empl_No_Updated" ColumnName="Empl_No_Updated" />
+                <ScalarProperty Name="Empl_Name_Updated" ColumnName="Empl_Name_Updated" />
+                <ScalarProperty Name="Warranty_Start_Date" ColumnName="Warranty_Start_Date" />
+                <ScalarProperty Name="Warranty_End_Date" ColumnName="Warranty_End_Date" />
+                <ScalarProperty Name="Serie" ColumnName="Serie" />
+                <ScalarProperty Name="Dev_Serie" ColumnName="Dev_Serie" />
+                <ScalarProperty Name="Engine_Typ" ColumnName="Engine_Typ" />
+                <ScalarProperty Name="Transmission" ColumnName="Transmission" />
+                <ScalarProperty Name="Fuel" ColumnName="Fuel" />
+                <ScalarProperty Name="Body_Type" ColumnName="Body_Type" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Postal_Code" ColumnName="Postal_Code" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Phone1" ColumnName="Phone1" />
+                <ScalarProperty Name="Fax" ColumnName="Fax" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Represent" ColumnName="Represent" />
+                <ScalarProperty Name="Prezident" ColumnName="Prezident" />
+                <ScalarProperty Name="Address_Coresp" ColumnName="Address_Coresp" />
+                <ScalarProperty Name="User_City" ColumnName="User_City" />
+                <ScalarProperty Name="User_Postal_Code" ColumnName="User_Postal_Code" />
+                <ScalarProperty Name="User_Address" ColumnName="User_Address" />
+                <ScalarProperty Name="User_Phone" ColumnName="User_Phone" />
+                <ScalarProperty Name="User_Phone1" ColumnName="User_Phone1" />
+                <ScalarProperty Name="User_Fax" ColumnName="User_Fax" />
+                <ScalarProperty Name="User_Email" ColumnName="User_Email" />
+                <ScalarProperty Name="User_Represent" ColumnName="User_Represent" />
+                <ScalarProperty Name="User_Prezident" ColumnName="User_Prezident" />
+                <ScalarProperty Name="User_Address_Coresp" ColumnName="User_Address_Coresp" />
+                <ScalarProperty Name="Contact_ID" ColumnName="Contact_ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="First_Name" ColumnName="First_Name" />
+                <ScalarProperty Name="SurName" ColumnName="SurName" />
+                <ScalarProperty Name="Family" ColumnName="Family" />
+                <ScalarProperty Name="Contact_Names" ColumnName="Contact_Names" />
+                <ScalarProperty Name="Contact_Address" ColumnName="Contact_Address" />
+                <ScalarProperty Name="Contact_City" ColumnName="Contact_City" />
+                <ScalarProperty Name="Contact_Email" ColumnName="Contact_Email" />
+                <ScalarProperty Name="Contact_Fax" ColumnName="Contact_Fax" />
+                <ScalarProperty Name="Contact_Mobile" ColumnName="Contact_Mobile" />
+                <ScalarProperty Name="Contact_Phone" ColumnName="Contact_Phone" />
+                <ScalarProperty Name="Contact_Post_Code" ColumnName="Contact_Post_Code" />
+                <ScalarProperty Name="Company" ColumnName="Company" />
+                <ScalarProperty Name="Buis_Pers" ColumnName="Buis_Pers" />
+                <ScalarProperty Name="Preff_Contact" ColumnName="Preff_Contact" />
+                <ScalarProperty Name="Preff_Contact_Name" ColumnName="Preff_Contact_Name" />
+                <ScalarProperty Name="Personal" ColumnName="Personal" />
+                <ScalarProperty Name="Contact_Relation" ColumnName="Contact_Relation" />
+                <ScalarProperty Name="Contact_Relation_Name" ColumnName="Contact_Relation_Name" />
+                <ScalarProperty Name="DailyKM" ColumnName="DailyKM" />
+                <ScalarProperty Name="DailyKMCalcDate" ColumnName="DailyKMCalcDate" />
+                <ScalarProperty Name="Expected_KM" ColumnName="Expected_KM" />
+                <ScalarProperty Name="isResource" ColumnName="isResource" />
+                <ScalarProperty Name="CarGUID" ColumnName="CarGUID" />
+                <ScalarProperty Name="InsBroker" ColumnName="InsBroker" />
+                <ScalarProperty Name="InsBrokerOffer" ColumnName="InsBrokerOffer" />
+                <ScalarProperty Name="SalesChannel" ColumnName="SalesChannel" />
+                <ScalarProperty Name="Client_Group_Owner" ColumnName="Client_Group_Owner" />
+                <ScalarProperty Name="Client_Group_User" ColumnName="Client_Group_User" />
+                <ScalarProperty Name="Deff_Service" ColumnName="Deff_Service" />
+                <ScalarProperty Name="Deff_Split" ColumnName="Deff_Split" />
+                <ScalarProperty Name="Full_Vin" ColumnName="Full_Vin" />
+                <ScalarProperty Name="OwnerConsent" ColumnName="OwnerConsent" />
+                <ScalarProperty Name="UserConsent" ColumnName="UserConsent" />
+                <ScalarProperty Name="Contr_Type" ColumnName="Contr_Type" />
+                <ScalarProperty Name="Contr_Type_Name" ColumnName="Contr_Type_Name" />
+                <ScalarProperty Name="User_Contr_Type" ColumnName="User_Contr_Type" />
+                <ScalarProperty Name="User_Contr_Type_Name" ColumnName="User_Contr_Type_Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Empl_Summary">
+            <EntityTypeMapping TypeName="StoreModel.Empl_Summary">
+              <MappingFragment StoreEntitySet="Empl_Summary">
+                <ScalarProperty Name="Empl_Code" ColumnName="Empl_Code" />
+                <ScalarProperty Name="Store" ColumnName="Store" />
+                <ScalarProperty Name="Service" ColumnName="Service" />
+                <ScalarProperty Name="Saler" ColumnName="Saler" />
+                <ScalarProperty Name="Stock_Op" ColumnName="Stock_Op" />
+                <ScalarProperty Name="ShowAllSplits" ColumnName="ShowAllSplits" />
+                <ScalarProperty Name="CloseAllSplits" ColumnName="CloseAllSplits" />
+                <ScalarProperty Name="Show_All_Parts" ColumnName="Show_All_Parts" />
+                <ScalarProperty Name="Warr_Stamps" ColumnName="Warr_Stamps" />
+                <ScalarProperty Name="Deff_Split" ColumnName="Deff_Split" />
+                <ScalarProperty Name="Log_Cars" ColumnName="Log_Cars" />
+                <ScalarProperty Name="Close_Ord_OnPrn" ColumnName="Close_Ord_OnPrn" />
+                <ScalarProperty Name="AutoForm_Parts" ColumnName="AutoForm_Parts" />
+                <ScalarProperty Name="Clients_List_No" ColumnName="Clients_List_No" />
+                <ScalarProperty Name="Work_Planning" ColumnName="Work_Planning" />
+                <ScalarProperty Name="Team_No" ColumnName="Team_No" />
+                <ScalarProperty Name="Empl_Name" ColumnName="Empl_Name" />
+                <ScalarProperty Name="UseCarsColors" ColumnName="UseCarsColors" />
+                <ScalarProperty Name="Client_Cards" ColumnName="Client_Cards" />
+                <ScalarProperty Name="Stock_Use_Calc_Km" ColumnName="Stock_Use_Calc_Km" />
+                <ScalarProperty Name="Group_Code" ColumnName="Group_Code" />
+                <ScalarProperty Name="Store_ETC" ColumnName="Store_ETC" />
+                <ScalarProperty Name="Vat_Perc" ColumnName="Vat_Perc" />
+                <ScalarProperty Name="TimeMultiplierForQuant" ColumnName="TimeMultiplierForQuant" />
+                <ScalarProperty Name="AdvancedWorkPlanning" ColumnName="AdvancedWorkPlanning" />
+                <ScalarProperty Name="Oper_Typ" ColumnName="Oper_Typ" />
+                <ScalarProperty Name="GMIntegration" ColumnName="GMIntegration" />
+                <ScalarProperty Name="ContactCheckType" ColumnName="ContactCheckType" />
+                <ScalarProperty Name="Repeated_Visit_Days" ColumnName="Repeated_Visit_Days" />
+                <ScalarProperty Name="Fixed_Repeated_Visit_Reason" ColumnName="Fixed_Repeated_Visit_Reason" />
+                <ScalarProperty Name="ShowAllStores" ColumnName="ShowAllStores" />
+                <ScalarProperty Name="CheckAllCodes" ColumnName="CheckAllCodes" />
+                <ScalarProperty Name="Order_Menu_Permisions" ColumnName="Order_Menu_Permisions" />
+                <ScalarProperty Name="Show_All_Reminders_Order" ColumnName="Show_All_Reminders_Order" />
+                <ScalarProperty Name="No_KM_Orders" ColumnName="No_KM_Orders" />
+                <ScalarProperty Name="EMPL_USERN" ColumnName="EMPL_USERN" />
+                <ScalarProperty Name="OldOrdersBackground" ColumnName="OldOrdersBackground" />
+                <ScalarProperty Name="OldOrdersForeColor" ColumnName="OldOrdersForeColor" />
+                <ScalarProperty Name="FIRM" ColumnName="FIRM" />
+                <ScalarProperty Name="LogDAT" ColumnName="LogDAT" />
+                <ScalarProperty Name="Warranty_Split" ColumnName="Warranty_Split" />
+                <ScalarProperty Name="Car_Subscr_Split" ColumnName="Car_Subscr_Split" />
+                <ScalarProperty Name="Dealer_No" ColumnName="Dealer_No" />
+                <ScalarProperty Name="ShowAllTasks" ColumnName="ShowAllTasks" />
+                <ScalarProperty Name="Employee_GUID" ColumnName="Employee_GUID" />
+                <ScalarProperty Name="CarsInsuranceInfo" ColumnName="CarsInsuranceInfo" />
+                <ScalarProperty Name="FiscalDeviceID" ColumnName="FiscalDeviceID" />
+                <ScalarProperty Name="CodeFiscal" ColumnName="CodeFiscal" />
+                <ScalarProperty Name="N18Active" ColumnName="N18Active" />
+                <ScalarProperty Name="ColorOrdersOnFlag" ColumnName="ColorOrdersOnFlag" />
+                <ScalarProperty Name="CheckDuplicateOrders" ColumnName="CheckDuplicateOrders" />
+                <ScalarProperty Name="ShowNotesClient" ColumnName="ShowNotesClient" />
+                <ScalarProperty Name="ShowItemsSearch" ColumnName="ShowItemsSearch" />
+                <ScalarProperty Name="CheckGDPROrders" ColumnName="CheckGDPROrders" />
+                <ScalarProperty Name="ProposeCarModel" ColumnName="ProposeCarModel" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Order_Print_Header">
+            <EntityTypeMapping TypeName="StoreModel.Order_Print_Header">
+              <MappingFragment StoreEntitySet="Order_Print_Header">
+                <ScalarProperty Name="Service" ColumnName="Service" />
+                <ScalarProperty Name="Order_No" ColumnName="Order_No" />
+                <ScalarProperty Name="Split" ColumnName="Split" />
+                <ScalarProperty Name="Split_Name" ColumnName="Split_Name" />
+                <ScalarProperty Name="Order_ID" ColumnName="Order_ID" />
+                <ScalarProperty Name="Empl_Name" ColumnName="Empl_Name" />
+                <ScalarProperty Name="Empl_Full_Name" ColumnName="Empl_Full_Name" />
+                <ScalarProperty Name="EmplPhone" ColumnName="EmplPhone" />
+                <ScalarProperty Name="EmplMobile" ColumnName="EmplMobile" />
+                <ScalarProperty Name="EmplEmail" ColumnName="EmplEmail" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+                <ScalarProperty Name="Date_End_Plan" ColumnName="Date_End_Plan" />
+                <ScalarProperty Name="Plate_Nr" ColumnName="Plate_Nr" />
+                <ScalarProperty Name="Last_KM" ColumnName="Last_KM" />
+                <ScalarProperty Name="KM_Out" ColumnName="KM_Out" />
+                <ScalarProperty Name="Reg_Date" ColumnName="Reg_Date" />
+                <ScalarProperty Name="Model" ColumnName="Model" />
+                <ScalarProperty Name="Make" ColumnName="Make" />
+                <ScalarProperty Name="Engine_Nr" ColumnName="Engine_Nr" />
+                <ScalarProperty Name="Vin_Nr" ColumnName="Vin_Nr" />
+                <ScalarProperty Name="Contract_No" ColumnName="Contract_No" />
+                <ScalarProperty Name="Discount_Group_Exp_Date" ColumnName="Discount_Group_Exp_Date" />
+                <ScalarProperty Name="Client_No" ColumnName="Client_No" />
+                <ScalarProperty Name="Firm" ColumnName="Firm" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="Address1" ColumnName="Address1" />
+                <ScalarProperty Name="Vat_No" ColumnName="Vat_No" />
+                <ScalarProperty Name="Bulstat" ColumnName="Bulstat" />
+                <ScalarProperty Name="Secret_Bolts" ColumnName="Secret_Bolts" />
+                <ScalarProperty Name="Fuel_Quant" ColumnName="Fuel_Quant" />
+                <ScalarProperty Name="Notes_Exterior" ColumnName="Notes_Exterior" />
+                <ScalarProperty Name="Return_Old_Parts" ColumnName="Return_Old_Parts" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Represent" ColumnName="Represent" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Saler_Firm" ColumnName="Saler_Firm" />
+                <ScalarProperty Name="Saler_City" ColumnName="Saler_City" />
+                <ScalarProperty Name="Saler_Address" ColumnName="Saler_Address" />
+                <ScalarProperty Name="TaxIdent" ColumnName="TaxIdent" />
+                <ScalarProperty Name="Saler_Phone" ColumnName="Saler_Phone" />
+                <ScalarProperty Name="Order_No1" ColumnName="Order_No1" />
+                <ScalarProperty Name="Service_Name" ColumnName="Service_Name" />
+                <ScalarProperty Name="Saler_EMail" ColumnName="Saler_EMail" />
+                <ScalarProperty Name="Saler_Web_Site" ColumnName="Saler_Web_Site" />
+                <ScalarProperty Name="Order_ID_Full" ColumnName="Order_ID_Full" />
+                <ScalarProperty Name="Ref_No" ColumnName="Ref_No" />
+                <ScalarProperty Name="Car_Resp" ColumnName="Car_Resp" />
+                <ScalarProperty Name="Add_Text" ColumnName="Add_Text" />
+                <ScalarProperty Name="OwnerFirm" ColumnName="OwnerFirm" />
+                <ScalarProperty Name="OwnerPhone" ColumnName="OwnerPhone" />
+                <ScalarProperty Name="OwnerEmail" ColumnName="OwnerEmail" />
+                <ScalarProperty Name="UserFirm" ColumnName="UserFirm" />
+                <ScalarProperty Name="UserPhone" ColumnName="UserPhone" />
+                <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+                <ScalarProperty Name="Contact_Names" ColumnName="Contact_Names" />
+                <ScalarProperty Name="Contact_Email" ColumnName="Contact_Email" />
+                <ScalarProperty Name="Contact_Mobile" ColumnName="Contact_Mobile" />
+                <ScalarProperty Name="Contact_Phone" ColumnName="Contact_Phone" />
+                <ScalarProperty Name="Body_Color" ColumnName="Body_Color" />
+                <ScalarProperty Name="NOTES" ColumnName="NOTES" />
+                <ScalarProperty Name="ORDER_STATUS" ColumnName="ORDER_STATUS" />
+                <ScalarProperty Name="Order_Status_Name" ColumnName="Order_Status_Name" />
+                <ScalarProperty Name="VAT" ColumnName="VAT" />
+                <ScalarProperty Name="VAT_PERC" ColumnName="VAT_PERC" />
+                <ScalarProperty Name="InvoiceTo" ColumnName="InvoiceTo" />
+                <ScalarProperty Name="InvoiceToFirm" ColumnName="InvoiceToFirm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zMVBOrders_p">
+            <EntityTypeMapping TypeName="StoreModel.zMVBOrders_p">
+              <MappingFragment StoreEntitySet="zMVBOrders_p">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ORDER_NO" ColumnName="ORDER_NO" />
+                <ScalarProperty Name="SERVICE" ColumnName="SERVICE" />
+                <ScalarProperty Name="SPLIT" ColumnName="SPLIT" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="QUANT" ColumnName="QUANT" />
+                <ScalarProperty Name="PRICE" ColumnName="PRICE" />
+                <ScalarProperty Name="DISCOUNT" ColumnName="DISCOUNT" />
+                <ScalarProperty Name="SUMM" ColumnName="SUMM" />
+                <ScalarProperty Name="ORDERP_TYPE" ColumnName="ORDERP_TYPE" />
+                <ScalarProperty Name="STATUS" ColumnName="STATUS" />
+                <ScalarProperty Name="STORE" ColumnName="STORE" />
+                <ScalarProperty Name="empl_id" ColumnName="empl_id" />
+                <ScalarProperty Name="JobID" ColumnName="JobID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="zMVB_Print_PS" FunctionName="StoreModel.Store.zMVB_Print_PS">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StoreModel.zMVB_Print_PS_Result">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Split" ColumnName="Split" />
+                <ScalarProperty Name="CODE" ColumnName="CODE" />
+                <ScalarProperty Name="DESCRIPTION" ColumnName="DESCRIPTION" />
+                <ScalarProperty Name="QUANT" ColumnName="QUANT" />
+                <ScalarProperty Name="CONS" ColumnName="CONS" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="zMVBOrderHeader" FunctionName="StoreModel.Store.zMVBOrderHeader">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="StoreModel.zMVBOrderHeader_Result">
+                <ScalarProperty Name="Model_Index" ColumnName="Model_Index" />
+                <ScalarProperty Name="NotesCar" ColumnName="NotesCar" />
+                <ScalarProperty Name="ReminderCar" ColumnName="ReminderCar" />
+                <ScalarProperty Name="NotesFirm" ColumnName="NotesFirm" />
+                <ScalarProperty Name="ReminderFirm" ColumnName="ReminderFirm" />
+                <ScalarProperty Name="PaymentTypeClient" ColumnName="PaymentTypeClient" />
+                <ScalarProperty Name="PaymentTypeInvTo" ColumnName="PaymentTypeInvTo" />
+                <ScalarProperty Name="Date_CreatedLastOrder" ColumnName="Date_CreatedLastOrder" />
+                <ScalarProperty Name="KMLastOrder" ColumnName="KMLastOrder" />
+                <ScalarProperty Name="Empl_NameLastOrder" ColumnName="Empl_NameLastOrder" />
+                <ScalarProperty Name="Contract_No" ColumnName="Contract_No" />
+                <ScalarProperty Name="Max_Credit" ColumnName="Max_Credit" />
+                <ScalarProperty Name="Saldo" ColumnName="Saldo" />
+                <ScalarProperty Name="Client_Group" ColumnName="Client_Group" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2007/06/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams />
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2003
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NikomPrint", "NikomPrint\NikomPrint.vbproj", "{9D5D0B5F-CDD3-4FCF-B6D7-FE18343BF741}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "NikomPrintConsole", "NikomPrintConsole\NikomPrintConsole.vbproj", "{6FFDC484-F315-442E-B16E-97605F73DEF3}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9D5D0B5F-CDD3-4FCF-B6D7-FE18343BF741}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D5D0B5F-CDD3-4FCF-B6D7-FE18343BF741}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D5D0B5F-CDD3-4FCF-B6D7-FE18343BF741}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D5D0B5F-CDD3-4FCF-B6D7-FE18343BF741}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6FFDC484-F315-442E-B16E-97605F73DEF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6FFDC484-F315-442E-B16E-97605F73DEF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6FFDC484-F315-442E-B16E-97605F73DEF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6FFDC484-F315-442E-B16E-97605F73DEF3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {88D6EF19-250B-4B91-8904-58BEA885E503}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://dev.azure.com/bdsoftltd
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = NikomPrint\\NikomPrint.vbproj
+		SccProjectName1 = NikomPrint
+		SccLocalPath1 = NikomPrint
+		SccProjectUniqueName2 = NikomPrintConsole\\NikomPrintConsole.vbproj
+		SccProjectName2 = NikomPrintConsole
+		SccLocalPath2 = NikomPrintConsole
+	EndGlobalSection
+EndGlobal
